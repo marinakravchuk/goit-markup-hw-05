@@ -392,9 +392,6 @@ button {
     margin-right: 30px;
 }
 
-.box1 {
-    position: relative;
-}
 
 .box2 {
     position: relative;
@@ -403,11 +400,19 @@ button {
 .box3 {
     position: relative;
 }
+.box1 {
+    display: block;
+    position: relative;
+}
 
 .t-box1 {
-        position: absolute;
-            left: 50px;
-            bottom: 0;
+    display: block;
+    position: absolute;
+    left: 50px;
+    
+}
+.box1 {
+    position: relative;
 }
 
 .work-card-text {
@@ -751,19 +756,22 @@ tramsfom: translateY(0%)
     position: relative;
 }*/
 
+.card-top-text{
+    position: absolute;
+        width: 370px;
+        height: 294px;
+        left: 0;
+        top: 0;
+        background-color: rgba(33, 150, 243, 0.9);
+        padding: 63px 24px;
+    
+        transition-property: background;
+        transition-duration: var(--timing-duration);
+        transition-timing-function: var(--timing-function);
+}
 
 .card-text {
-    position: absolute;
-    width: 370px;
-    height: 294px;
-    left: 0;
-    top: 0;
-    background-color: rgba(33, 150, 243, 0.9);
-    padding: 63px 24px;
 
-    transition-property: background ;
-    transition-duration:var(--timing-duration) ;
-    transition-timing-function: var(--timing-function);
 }
 
 
