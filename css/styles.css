@@ -591,7 +591,8 @@ transition: background-color var(--timing-duration) var(--timing-function);
     color: #AFB1B8;
     background-color: #FFFFFF;
     fill: #AFB1B8;
-    transition: border-color var(--timing-duration) var(--timing-function);
+    transition: fill var(--timing-duration) var(--timing-function), 
+    border-color var(--timing-duration) var(--timing-function);
 
 
 }
