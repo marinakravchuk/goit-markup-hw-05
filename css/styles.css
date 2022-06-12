@@ -33,7 +33,7 @@ img {
     height: auto;
 }
 
-.conteiner {
+.container {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -195,7 +195,7 @@ li {
 
 .contact-links {
     /*display: block;*/
-    align-items: center;
+    align-items: baseline;
 
 }
 
@@ -367,6 +367,42 @@ button {
     margin-right: 30px;
 }
 
+.box1 {
+    position: relative;
+}
+
+.box2 {
+    position: relative;
+}
+
+.box3 {
+    position: relative;
+}
+
+
+
+.work-card-text {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    width: 370px;
+    height: 70px;
+    left: 615px;
+    top: 1435px;
+    background-color: rgba(47, 48, 58, 0.8);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+   
+}
+
+.work-c-text {
+    font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    
+        color: #FFFFFF;
+}
 
 /*Команда*/
 .about-us {
@@ -635,7 +671,8 @@ button {
     background-color: #FFFFFF;
     border: 1px solid #EEEEEE;
     cursor: pointer;
-
+    position: relative;
+   
 }
 
 .card-content {
@@ -650,6 +687,28 @@ button {
     border-radius: 0px 0px 4px 4px;
 }
 
+/*.card-thumb {
+    position: relative;
+}*/
+
+
+.card-text {
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    left: 0;
+    top: 0;
+    background: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+
+    transition-duration:250ms;
+}
+
+
+.card-text:hover,
+.card-text:focus {
+
+}
 
 /* Текст */
 .header-contact-link {
@@ -668,6 +727,15 @@ button {
     color: var(--text-color);
     padding-top: 10px;
 
+}
+
+.c-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
 }
 
 /*Подвал*/
