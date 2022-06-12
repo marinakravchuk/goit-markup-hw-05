@@ -17,6 +17,8 @@
     --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
+    --timing-duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Основные: цвет и текст */
@@ -137,6 +139,8 @@ li {
     color: var(--btn-color-hb);
 }
 
+
+
 .site-nav .header-contact-link {
     padding: 0;
     margin: 0;
@@ -157,8 +161,24 @@ li {
 
 .site-nav .current {
     color: var(--btn-color-hb);
-}
 
+
+    }
+        
+
+
+.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+
+}
 
 
 
@@ -177,6 +197,8 @@ li {
     letter-spacing: 0.02em;
 
     color: var(--text-color);
+
+transition: color var(--timing-duration) var(--timing-function);
 }
 
 .header-contact-link {
@@ -202,6 +224,7 @@ li {
 /*Ссылки в шапке*/
 .site-nav-link {
     display: flex;
+    position: relative;
 
     padding-top: 32px;
     padding-bottom: 32px;
@@ -211,6 +234,8 @@ li {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--btn-color-text);
+
+    transition: color var(--timing-duration) var(--timing-function);
 
 }
 
@@ -379,9 +404,14 @@ button {
     position: relative;
 }
 
-
+.t-box1 {
+        position: absolute;
+            left: 50px;
+            bottom: 0;
+}
 
 .work-card-text {
+
     padding-top: 27px;
     padding-bottom: 27px;
     width: 370px;
@@ -390,7 +420,10 @@ button {
     top: 1435px;
     background-color: rgba(47, 48, 58, 0.8);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-   
+        
+    /*position: absolute;
+    left: 0;
+    bottom: 0;*/
 }
 
 .work-c-text {
@@ -504,6 +537,8 @@ button {
     align-items: center;
     justify-content: center;
     fill: #AFB1B8;
+transition: background-color var(--timing-duration) var(--timing-function);
+
 }
 
 .workers-soc-link:hover,
@@ -557,6 +592,9 @@ button {
     color: #AFB1B8;
     background-color: #FFFFFF;
     fill: #AFB1B8;
+    transition: border-color var(--timing-duration) var(--timing-function);
+
+
 }
 
 .clients-link:hover,
@@ -612,15 +650,20 @@ button {
     line-height: 1.62;
     letter-spacing: 0.03em;
     color: var(--btn-color-text);
-    background: var(--bnt-color-hover);
+    background-color: var(--bnt-color-hover);
 
     padding: 6px 22px;
+
+transition: color var(--timing-duration) var(--timing-function),
+background-color var(--timing-duration) var(--timing-function),
+box-shadow var(--timing-duration) var(--timing-function);
+
 }
 
 .site-bnt:hover,
 .site-bnt:focus {
     color: var(--bnt-color-hover);
-    background: var(--btn-color-hb);
+    background-color: var(--btn-color-hb);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
@@ -638,8 +681,23 @@ button {
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
-    /*outline: 1px solid red;*/
+    /*outline: 1px solid red;*/ 
 }
+
+/*
+
+.c-text {
+transform: translateY(100%);
+transition: transform 2500ms var(--timing-function);
+
+}
+
+
+.set-list .item:hover .c-text {
+tramsfom: translateY(0%)
+
+}
+*/
 
 .set-list .item:nth-child(3n) {
     margin-right: 0px;
@@ -672,6 +730,8 @@ button {
     border: 1px solid #EEEEEE;
     cursor: pointer;
     position: relative;
+    transition: box-shadow var(--timing-duration) var(--timing-function),
+    border-radius var(--timing-duration) var(--timing-function);
    
 }
 
@@ -698,10 +758,12 @@ button {
     height: 294px;
     left: 0;
     top: 0;
-    background: rgba(33, 150, 243, 0.9);
+    background-color: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
 
-    transition-duration:250ms;
+    transition-property: background ;
+    transition-duration:var(--timing-duration) ;
+    transition-timing-function: var(--timing-function);
 }
 
 
@@ -788,7 +850,7 @@ button {
     color: rgba(255, 255, 255, 0.6);
 
     display: block;
-
+transition: color var(--timing-duration) var(--timing-function);
 
 }
 
@@ -809,6 +871,7 @@ button {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #ffffff;
+    transition: color var(--timing-duration) var(--timing-function);
 }
 
 .title-soc {
@@ -839,12 +902,15 @@ button {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1);
-    ;
+    
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     fill: #ffffff;
+
+    transition: background-color var(--timing-duration) var(--timing-function);
+    
 }
 
 .footer-soc-link:hover,
