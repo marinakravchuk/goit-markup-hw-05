@@ -689,20 +689,7 @@ box-shadow var(--timing-duration) var(--timing-function);
     /*outline: 1px solid red;*/ 
 }
 
-/*
 
-.c-text {
-transform: translateY(100%);
-transition: transform 2500ms var(--timing-function);
-
-}
-
-
-.set-list .item:hover .c-text {
-tramsfom: translateY(0%)
-
-}
-*/
 
 .set-list .item:nth-child(3n) {
     margin-right: 0px;
@@ -734,7 +721,6 @@ tramsfom: translateY(0%)
     background-color: #FFFFFF;
     border: 1px solid #EEEEEE;
     cursor: pointer;
-    position: relative;
     transition: box-shadow var(--timing-duration) var(--timing-function),
     border-radius var(--timing-duration) var(--timing-function);
    
@@ -752,33 +738,40 @@ tramsfom: translateY(0%)
     border-radius: 0px 0px 4px 4px;
 }
 
-/*.card-thumb {
+.card-thumb {
     position: relative;
-}*/
+    /*overflow: hidden;*/
+}
+
+.set-list .item:hover .card-top-text {
+    tramsfom: translateY(0%)
+}
 
 .card-top-text{
-    position: absolute;
-        width: 370px;
-        height: 294px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.03em;
+        
+        color: #FFFFFF;
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
         left: 0;
         top: 0;
         background-color: rgba(33, 150, 243, 0.9);
         padding: 63px 24px;
     
+
+        transform: translateY(100%);
+        transition: transform 2500ms var(--timing-function);
+        
         transition-property: background;
         transition-duration: var(--timing-duration);
         transition-timing-function: var(--timing-function);
 }
 
-.card-text {
-
-}
-
-
-.card-text:hover,
-.card-text:focus {
-
-}
 
 /* Текст */
 .header-contact-link {
@@ -799,14 +792,6 @@ tramsfom: translateY(0%)
 
 }
 
-.c-text {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-    letter-spacing: 0.03em;
-
-    color: #FFFFFF;
-}
 
 /*Подвал*/
 .logo-adress {
