@@ -785,7 +785,7 @@ box-shadow var(--timing-duration) var(--timing-function);
 
 }
 /*Модальное окно*/
-/*.backdrop {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -841,7 +841,7 @@ border-radius: 4px;
     border-radius: 50%;
     fill: #000000;
     transition: fill var(--timing-duration) var(--timing-function);
-}*/
+}
 
 
 /*Подвал*/
