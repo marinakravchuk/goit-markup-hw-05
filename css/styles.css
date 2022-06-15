@@ -609,8 +609,14 @@ transition: background-color var(--timing-duration) var(--timing-function);
     border-color: var(--btn-color-hb);
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
+
+.clients-icon {
+    fill: currentColor;
+    transition: color var(--timing-duration) var(--timing-function);
+}
+
+.clients-link:hover .clients-icon:hover,
+.clients-link:focus .clients-icon:focus {
     color: var(--btn-color-hb);
 }
 
