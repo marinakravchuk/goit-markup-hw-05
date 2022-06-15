@@ -578,7 +578,16 @@ transition: background-color var(--timing-duration) var(--timing-function);
 
 .list-item {
     margin-right: 30px;
+    color: #AFB1B8;
+    transition: color var(--timing-duration) var(--timing-function)
 }
+
+.list-item:hover,
+.list-item:focus {
+    color: var(--btn-color-hb);
+}
+
+
 
 .clients-link {
     display: inline-flex;
@@ -590,11 +599,9 @@ transition: background-color var(--timing-duration) var(--timing-function);
     border: 1px solid #AFB1B8;
     color: #AFB1B8;
     background-color: #FFFFFF;
-    fill: #AFB1B8;
-    transition: fill var(--timing-duration) var(--timing-function), 
+    fill: currentColor;
+    transition: color var(--timing-duration) var(--timing-function), 
     border-color var(--timing-duration) var(--timing-function);
-
-
 }
 
 .clients-link:hover,
@@ -604,7 +611,7 @@ transition: background-color var(--timing-duration) var(--timing-function);
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-    fill: var(--btn-color-hb);
+    color: var(--btn-color-hb);
 }
 
 
@@ -808,22 +815,12 @@ transform: translate(-50%, -50%);
 
 }
 
-
-.modal-close {
-width: 30px;
-height: 30px;
-left: 1026px;
-top: 229px;
-
-background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.1);
-background: #FFFFFF;
-
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-0px 1px 1px rgba(0, 0, 0, 0.14),
-0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+.is-hidden {
+    opacity:0; 
+    visibility: hidden; 
+    pointer-events: none;
 }
+
 
 .modal-bnt-close {
     position: absolute;
