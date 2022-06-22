@@ -114,7 +114,6 @@ li {
 }
 
 .header-icon {
-    margin-left: 30px;
     align-items: center;
     vertical-align: middle;
     margin-right: 10px;
@@ -185,6 +184,10 @@ li {
 /*Header-Контактные линки */
 .header-contact-link {
     margin-left: auto;
+}
+
+.h-e-link {
+    margin-right: 30px;
 }
 
 .h-e-link,
